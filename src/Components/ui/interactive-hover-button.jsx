@@ -15,7 +15,7 @@ const InteractiveHoverButton = React.forwardRef(
         )}
         {...props}
       >
-        <span className="inline-block text-black translate-x-1 transition-all duration-300 group-hover:translate-x-12 group-hover:opacity-0">
+        <span className="inline-block text-gray-500  translate-x-1 transition-all duration-300 group-hover:translate-x-12 group-hover:opacity-0">
           {/* {text} */}
           {props.children}
         </span>

@@ -4,10 +4,10 @@ import Main from "../layout/Main";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import Error from "../Pages/Error/Error";
-// import SingelRoom from "../Pages/SingelRoom/SingelRoom";
-// import Rooms from "../Pages/Rooms/Rooms";
-// import MyRooms from "../Pages/MyRoooms/MyRooms";
-// import PrivetedRoute from "../Priveted/PrivetedRoute";
+import EventDetails from "@/Pages/EventDetails/EventDetails";
+import PrivetedRoute from "@/Priveted/PrivetedRoute";
+import CreateEvent from "@/Pages/CreateEvent/CreateEvent";
+import DashboardHome from "@/Pages/Dashboard/DashboardHome";
 
 const router = createBrowserRouter([
   {
@@ -27,23 +27,26 @@ const router = createBrowserRouter([
         path: "/register",
         element: <Register />,
       },
-      //   {
-      //     path: "/rooms",
-      //     element: <Rooms />,
-      //     loader: () => fetch("https://server-nine-beryl.vercel.app/rooms"),
-      //   },
-      //   {
-      //     path: "/singleRoom/:id",
-      //     element: <SingelRoom />,
-      //   },
-      //   {
-      //     path: "myRooms",
-      //     element: (
-      //       <PrivetedRoute>
-      //         <MyRooms />
-      //       </PrivetedRoute>
-      //     ),
-      //   },
+      {
+        path: "/eventDetails/:id",
+        element: <EventDetails />,
+      },
+      {
+        path: "/eventCreation",
+        element: (
+          <PrivetedRoute>
+            <CreateEvent />
+          </PrivetedRoute>
+        ),
+      },
+      {
+        path: "/dashboard",
+        element: (
+          <PrivetedRoute>
+            <DashboardHome></DashboardHome>
+          </PrivetedRoute>
+        ),
+      },
     ],
   },
 ]);

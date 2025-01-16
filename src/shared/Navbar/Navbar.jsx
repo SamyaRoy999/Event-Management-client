@@ -3,8 +3,6 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { CiLogin } from "react-icons/ci";
 import { FiLogOut } from "react-icons/fi";
-import { Button } from "../../Components/ui/button";
-import { use } from "react";
 import { ModeToggle } from "@/Components/DarkModeButton/Dark";
 
 const Navbar = () => {
@@ -13,14 +11,23 @@ const Navbar = () => {
   const [navIcon, setNavIcon] = useState(false);
   const NabList = (
     <>
-      <NavLink to="/" className=" mr-3 text-sm font-montserrat ">
+      <NavLink
+        to="/"
+        className=" block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 "
+      >
         <a>Home</a>
       </NavLink>
-      <NavLink to="/rooms" className="  mr-3 text-sm font-montserrat">
-        <a>Rooms</a>
+      <NavLink
+        to="/eventCreation"
+        className=" block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 "
+      >
+        <a>Event Creation</a>
       </NavLink>
-      <NavLink to="myRooms" className="  mr-3 text-sm font-montserrat">
-        <a>My Bookings</a>
+      <NavLink
+        to="/dashboard"
+        className=" block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 "
+      >
+        <a>Dashboard</a>
       </NavLink>
     </>
   );
@@ -29,17 +36,14 @@ const Navbar = () => {
     <>
       <nav className="bg-white rounded-lg fixed   z-20 w-full mx-auto   border-gray-200 dark:bg-gray-900">
         <div className="max-w-screen-lg mx-auto  flex flex-wrap items-center justify-between  p-4">
-          <a
-            href="https://flowbite.com/"
-            className="flex items-center space-x-3 rtl:space-x-reverse"
-          >
+          <a className="flex items-center space-x-3 rtl:space-x-reverse">
             <img
-              src="https://flowbite.com/docs/images/logo.svg"
+              src="https://i.ibb.co.com/bHcdGXJ/a7053374ff199ebf21f1fe6cde6ac5bb.png"
               className="h-8"
               alt="Flowbite Logo"
             />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-              Flowbite
+              EventsApp
             </span>
           </a>
           <div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
@@ -97,7 +101,7 @@ const Navbar = () => {
                         Earnings
                       </a>
                     </li>
-                    <li>
+                    <li className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
                       <ModeToggle />
                     </li>
                     <li>
@@ -148,47 +152,7 @@ const Navbar = () => {
             id="navbar-user"
           >
             <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
-                  aria-current="page"
-                >
-                  Home
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  About
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  Services
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  Pricing
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  Contact
-                </a>
-              </li>
+              {NabList}
             </ul>
           </div>
         </div>
@@ -198,40 +162,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-// {user ? (
-//           <>
-//             <a
-//               className="flex gap-1 items-center font-bold  text-sm lg:text-lg font-montserrat cursor-pointer  text-[#90B0B7] "
-//               onClick={() => userSignOut()}
-//             >
-//               {" "}
-//               <FiLogOut className="text-xl " /> Logout
-//             </a>
-//             <div className="">
-//               <div className="group relative cursor-pointer  px-4">
-//                 <div className="flex items-center  justify-between space-x-5 p-1 bg-white ">
-//                   <a className="menu-hover  " onClick="">
-//                     <div className="avatar border-4 rounded-full  border-[#90B0B7] p-1">
-//                       <div className="w-7   rounded-full">
-//                         <img src={user.photoURL || photo} />
-//                       </div>
-//                     </div>
-//                   </a>
-//                 </div>
-//                 <div className="invisible absolute z-50 flex w-28  right-0 flex-col bg-gray-100 py-1 px-4 text-gray-800 shadow-xl group-hover:visible">
-//                   <a className="my-2 block border-b    w-full border-gray-100  font-semibold text-gray-500 hover:text-black ">
-//                     {user.displayName || Name}
-//                   </a>
-//                 </div>
-//               </div>
-//             </div>
-//           </>
-//         ) : (
-//           <Link to="./login">
-//             <button className="flex gap-1 items-center font-bold text-base lg:text-lg font-montserrat btn-md  btn btn-outline text-[#90B0B7] ">
-//               <CiLogin className="text-xl" /> Login
-//             </button>
-//           </Link>
-//         )}
-//       </div>

@@ -6,7 +6,7 @@
     "location": "San Francisco, CA",
     "description": "A conference for tech enthusiasts to discuss future trends.",
     "category": "Technology",
-    "img": "../../public/img/cardimg/card1.jpg"
+    "img": "https://i.ibb.co.com/4shQWN4/card1.jpg"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "location": "New York, NY",
     "description": "A showcase of modern art from emerging artists worldwide.",
     "category": "Art",
-    "img": "../../public/img/cardimg/card2.jpg"
+    "img": "https://i.ibb.co.com/xJxZKfG/card2.jpg"
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "location": "Austin, TX",
     "description": "An outdoor festival featuring live performances from top artists.",
     "category": "Music",
-    "img": "../../public/img/cardimg/card3.jpg"
+    "img": "https://i.ibb.co.com/N2YFChY/card3.jpg"
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "location": "Seattle, WA",
     "description": "An event for startups to pitch their ideas to potential investors.",
     "category": "Business",
-    "img": "../../public/img/cardimg/card4.jpg"
+    "img": "https://i.ibb.co.com/q1kC5Pc/card4.jpg"
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@
     "location": "Sedona, AZ",
     "description": "A retreat focused on mental and physical well-being with expert guides.",
     "category": "Health",
-    "img": "../../public/img/cardimg/card5.jpg"
+    "img": "https://i.ibb.co.com/YTZ2fSS/card5.jpg"
   },
   {
     "id": 6,
@@ -51,6 +51,6 @@
     "location": "Los Angeles, CA",
     "description": "A competitive gaming event featuring the world's top players.",
     "category": "Gaming",
-    "img": "../../public/img/cardimg/card6.jpg"
+    "img": "https://i.ibb.co.com/6B8MqNs/card6.jpg"
   }
 ]

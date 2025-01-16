@@ -4,7 +4,7 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div>
+    <div className="max-w-screen-lg mx-auto">
       <Banner></Banner>
       <UpcomingEvent />
     </div>

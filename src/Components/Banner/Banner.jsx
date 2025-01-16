@@ -18,19 +18,19 @@ export function Banner() {
 
   const banners = [
     {
-      img: "../../../public/img/banner1.jpg",
+      img: "https://i.ibb.co.com/XWG0kVx/banner1.jpg",
       title: "Music Fest",
       description:
         "Experience live performances from top artists around the globe.",
     },
     {
-      img: "../../../public/img/banner2.jpg",
+      img: "https://i.ibb.co.com/DGmQLkD/banner2.jpg",
       title: "Tech Conference 2025",
       description:
         "Join the largest tech conference of the year and explore innovations.",
     },
     {
-      img: "../../../public/img/banner3.jpg",
+      img: "https://i.ibb.co.com/MRKnd9Q/banner3.jpg",
       title: "Art Exhibition",
       description:
         "Discover breathtaking art from emerging and established artists.",
