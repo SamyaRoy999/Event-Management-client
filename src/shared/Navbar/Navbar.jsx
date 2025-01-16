@@ -3,8 +3,9 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { CiLogin } from "react-icons/ci";
 import { FiLogOut } from "react-icons/fi";
-import { Button } from "../ui/button";
+import { Button } from "../../Components/ui/button";
 import { use } from "react";
+import { ModeToggle } from "@/Components/DarkModeButton/Dark";
 
 const Navbar = () => {
   const { userSignOut, user, Name, photo } = useContext(AuthContext);
@@ -27,7 +28,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-white border-gray-200 dark:bg-gray-900">
+      <nav className="bg-white max-w-screen-lg mx-auto border-gray-200 dark:bg-gray-900">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a
             href="https://flowbite.com/"
@@ -60,7 +61,7 @@ const Navbar = () => {
 
                 <div
                   className={`z-50 ${
-                    showProfile ? "absolute right-0 top-10" : "hidden"
+                    showProfile ? "absolute right-20 top-10" : "hidden"
                   }  my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600`}
                   id="user-dropdown"
                 >
@@ -69,7 +70,7 @@ const Navbar = () => {
                       {user.displayName}
                     </span>
                     <span className="block text-sm  text-gray-500 truncate dark:text-gray-400">
-                      {user.email}
+                      {user.email || "Guest"}
                     </span>
                   </div>
                   <ul className="py-2" aria-labelledby="user-menu-button">
@@ -96,6 +97,9 @@ const Navbar = () => {
                       >
                         Earnings
                       </a>
+                    </li>
+                    <li>
+                      <ModeToggle />
                     </li>
                     <li>
                       <a
