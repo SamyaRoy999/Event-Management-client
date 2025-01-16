@@ -40,7 +40,7 @@ export function Banner() {
   return (
     <Carousel
       plugins={[plugin.current]}
-      className="w-full mx-auto max-w-full  "
+      className="w-full mx-auto max-w-full   "
       options={{ loop: true }}
       onMouseEnter={() => plugin.current.stop()}
       onMouseLeave={() => plugin.current.reset()}
@@ -49,7 +49,7 @@ export function Banner() {
         {banners.map((banner, index) => (
           <CarouselItem key={index}>
             <div className="p-4">
-              <Card className="relative">
+              <Card className="relative mt-16">
                 <div className="absolute w-full h-[70vh]  bg-[#003d9f] opacity-20"></div>
                 <img
                   src={banner.img}

@@ -24,12 +24,11 @@ const Navbar = () => {
       </NavLink>
     </>
   );
-  console.log(user);
 
   return (
     <>
-      <nav className="bg-white max-w-screen-lg mx-auto border-gray-200 dark:bg-gray-900">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <nav className="bg-white rounded-lg fixed   z-20 w-full mx-auto   border-gray-200 dark:bg-gray-900">
+        <div className="max-w-screen-lg mx-auto  flex flex-wrap items-center justify-between  p-4">
           <a
             href="https://flowbite.com/"
             className="flex items-center space-x-3 rtl:space-x-reverse"
